@@ -10,6 +10,7 @@
   --eggshell: hsl(30, 54%, 90%);
   --lightgrey: hsl(30, 18%, 87%);
   --wengebrown: hsl(30, 10%, 34%);
+  --mycolor: hsl(30, 10%, 53%);
   --darkcharcoal: hsl(24, 5%, 18%);
 }
 
@@ -19,10 +20,11 @@
   box-sizing: border-box;
 }
 html {
-  font-size: 17px;
-  background: var(--rosewhite);
-  color: var(--darkcharcoal);
+  font-size: 16px;
+  background: var(--eggshell);
+  color: var(--mycolor);
   font-family: var(--font-Outfit);
+  font-weight: 600;
   line-height: 1.5rem;
 }
 
@@ -36,10 +38,20 @@ html {
 
 section {
   margin-bottom: 2rem;
+  background: var(--white);
 }
 
 ::marker {
-  line-height: 2.5rem;
+  line-height: 2rem;
+}
+
+.unordered ::marker {
+  color: var(--darkRaspberry);
+  font-size: 13px;
+}
+
+.unordered li {
+  padding-left: 1rem;
 }
 
 span,
@@ -47,11 +59,15 @@ span,
   font-weight: bold;
 }
 
+span {
+  color: var(--wengebrown);
+}
+
 /* 		Main		___________________________________ */
 main {
-  margin: 180px auto;
+  margin: 8rem auto;
   padding: 40px;
-  width: 50%;
+  width: 738px;
   background: var(--white);
   border-radius: 30px;
 }
@@ -68,7 +84,7 @@ main {
   font-family: var(--font-Young-serif);
   font-weight: lighter;
   margin-bottom: 20px;
-  font-size: 3rem;
+  font-size: 2.6rem;
   margin-block: 2.8rem;
   line-height: 2.2rem;
 }
@@ -76,34 +92,49 @@ main {
 /*		Preparation section		_______________________ */
 .preparation {
   background: var(--rosewhite);
-  padding: 20px 10px;
+  padding: 18px 10px;
+  border-radius: 15px;
 }
 
 .preparation h3 {
   color: var(--darkRaspberry);
   margin-bottom: 1rem;
   padding-left: 20px;
+  font-size: 1.2rem;
+  font-weight: 700;
 }
 
-.ul ::marker {
-  color: var(--darkRaspberry);
-  font-size: 13px;
+.preparation .unordered {
+  padding-left: 2.4rem;
 }
 
-.unordered li {
-  padding: 10px;
+.preparation .unordered span {
+  padding-left: 0.2rem;
+  margin-right: 0.2rem;
 }
 
 /*		Ingredients section		_______________________ */
 .ingredients {
-  border-bottom: 2px solid var(--lightgrey);
+  border-bottom: 1px solid var(--lightgrey);
   padding-bottom: 2rem;
+}
+
+.unordered {
+  padding-left: 1.2rem;
+}
+
+.unordered li {
+  padding-left: 1.3rem;
 }
 
 /*		Instructions section	________________________*/
 .instructions {
-  border-bottom: 2px solid var(--lightgrey);
+  border-bottom: 1px solid var(--lightgrey);
   padding-bottom: 2rem;
+}
+
+.ordered {
+  padding-left: 1.5rem;
 }
 
 .ordered ::marker {
@@ -111,11 +142,12 @@ main {
 }
 
 .ordered li {
-  padding: 10px;
+  padding-left: 1rem;
+  margin-bottom: 0.3rem;
 }
 
-.measures {
-  color: var(--nutmeg);
+.ordered li span {
+  margin-right: 0.3rem;
 }
 
 /*		Nutrition section		_______________________ */
@@ -126,12 +158,25 @@ table {
 th,
 td {
   border-bottom: 1px solid var(--lightgrey);
-  padding: 2rem 0 0 1rem;
+  padding: 1rem 0 0.8rem 2rem;
+}
+
+.measures {
+  color: var(--nutmeg);
+  padding-right: 1rem;
 }
 
 /* Media Queries 
-	Mobile: 375px- 	 */
+	Mobile: 375px- ____________________________________	 */
 @media screen and (max-width: 375px) {
+  html {
+    line-height: 1.6rem;
+  }
+
+  ::marker {
+    line-height: 0;
+  }
+
   main {
     margin: 0;
     padding: 0;
@@ -140,6 +185,11 @@ td {
     border-radius: 30px;
   }
 
+  section:not(.recipe) {
+    margin-inline: 1.9rem;
+  }
+
+  /* Q recipe */
   .recipe-img {
     border-radius: 0;
   }
@@ -148,6 +198,30 @@ td {
     color: var(--darkcharcoal);
     font-family: var(--font-Young-serif);
     font-weight: lighter;
-    font-size: 2.2rem;
+    font-size: 2.1rem;
+    padding-inline: 0;
+    margin: 2rem 0 1.8rem 0;
+  }
+
+  .recipe-title,
+  .recipe-info {
+    margin-inline: 1.9rem;
+  }
+
+  /* Q  Preparation  */
+  .preparation {
+    background: var(--rosewhite);
+    padding: 20px 8px;
+    border-radius: 15px;
+  }
+
+  .preparation h3 {
+    color: var(--darkRaspberry);
+    padding-left: 20px;
+  }
+
+  .ul ::marker {
+    color: var(--darkRaspberry);
+    font-size: 13px;
   }
 }
