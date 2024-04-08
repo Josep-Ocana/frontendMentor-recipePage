@@ -1,115 +1,153 @@
 @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Young+Serif&display=swap');
 
 :root {
-	--font-Outfit: 'Outfit', sans-serif;
-	--font-Young-serif: 'Young serif', sans-serif;
-	--nutmeg: hsl(14, 45%, 36%);
-	--darkRaspberry: hsl(332, 51%, 32%);
-	--white: hsl(0, 0%, 100%);
-	--rosewhite: hsl(330, 100%, 98%);
-	--eggshell: hsl(30, 54%, 90%);
-	--lightgrey: hsl(30, 18%, 87%);
-	--wengebrown: hsl(30, 10%, 34%);
-	--darkcharcoal: hsl(24, 5%, 18%);
+  --font-Outfit: 'Outfit', sans-serif;
+  --font-Young-serif: 'Young serif', sans-serif;
+  --nutmeg: hsl(14, 45%, 36%);
+  --darkRaspberry: hsl(332, 51%, 32%);
+  --white: hsl(0, 0%, 100%);
+  --rosewhite: hsl(330, 100%, 98%);
+  --eggshell: hsl(30, 54%, 90%);
+  --lightgrey: hsl(30, 18%, 87%);
+  --wengebrown: hsl(30, 10%, 34%);
+  --darkcharcoal: hsl(24, 5%, 18%);
 }
 
 /* Presets CSS */
 * {
-	margin: 0;
-	box-sizing: border-box;
+  margin: 0;
+  box-sizing: border-box;
 }
 html {
-	font-size: 17px;
-	background: var(--rosewhite);
-	color: var(--darkcharcoal);
-	font-family: var(--font-Outfit);
-	line-height: 1.5rem;
-}
-
-.title,
-.measures,
-.ordered ::marker {
-	color: var(--nutmeg);
+  font-size: 17px;
+  background: var(--rosewhite);
+  color: var(--darkcharcoal);
+  font-family: var(--font-Outfit);
+  line-height: 1.5rem;
 }
 
 .title {
-	font-family: var(--font-Young-serif);
-	font-weight: lighter;
-	font-size: 1.8rem;
-	margin-bottom: 1.5rem;
+  color: var(--nutmeg);
+  font-family: var(--font-Young-serif);
+  font-weight: lighter;
+  font-size: 1.8rem;
+  margin-bottom: 1.5rem;
 }
 
 section {
-	margin-bottom: 2rem;
+  margin-bottom: 2rem;
 }
 
 ::marker {
-	line-height: 2.5rem;
+  line-height: 2.5rem;
 }
 
 span,
 .ordered ::marker {
-	font-weight: bold;
-}
-
-.ingredients,
-.instructions {
-	border-bottom: 2px solid var(--lightgrey);
-	padding-bottom: 2rem;
-}
-
-.unordered li,
-.ordered li {
-	padding: 10px;
+  font-weight: bold;
 }
 
 /* 		Main		___________________________________ */
 main {
-	margin: 180px auto;
-	padding: 40px;
-	width: 50%;
-	background: var(--white);
-	border-radius: 30px;
+  margin: 180px auto;
+  padding: 40px;
+  width: 50%;
+  background: var(--white);
+  border-radius: 30px;
 }
 
 /*		Recipe section			_______________________ */
 .recipe-img {
-	display: block;
-	width: 100%;
-	border-radius: 15px;
+  display: block;
+  width: 100%;
+  border-radius: 15px;
 }
 
 .recipe-title {
-	font-family: var(--font-Young-serif);
-	font-weight: lighter;
-	margin-bottom: 20px;
-	font-size: 3rem;
-	margin-block: 2.8rem;
+  color: var(--darkcharcoal);
+  font-family: var(--font-Young-serif);
+  font-weight: lighter;
+  margin-bottom: 20px;
+  font-size: 3rem;
+  margin-block: 2.8rem;
+  line-height: 2.2rem;
 }
 
 /*		Preparation section		_______________________ */
 .preparation {
-	background: var(--rosewhite);
-	padding: 20px 10px;
+  background: var(--rosewhite);
+  padding: 20px 10px;
 }
 
 .preparation h3 {
-	color: var(--darkRaspberry);
-	margin-bottom: 1rem;
-	padding-left: 20px;
+  color: var(--darkRaspberry);
+  margin-bottom: 1rem;
+  padding-left: 20px;
 }
 
 .ul ::marker {
-	color: var(--darkRaspberry);
-	font-size: 13px;
+  color: var(--darkRaspberry);
+  font-size: 13px;
+}
+
+.unordered li {
+  padding: 10px;
 }
 
 /*		Ingredients section		_______________________ */
+.ingredients {
+  border-bottom: 2px solid var(--lightgrey);
+  padding-bottom: 2rem;
+}
 
 /*		Instructions section	________________________*/
+.instructions {
+  border-bottom: 2px solid var(--lightgrey);
+  padding-bottom: 2rem;
+}
+
+.ordered ::marker {
+  color: var(--nutmeg);
+}
+
+.ordered li {
+  padding: 10px;
+}
+
+.measures {
+  color: var(--nutmeg);
+}
 
 /*		Nutrition section		_______________________ */
+table {
+  width: 100%;
+}
+
+th,
+td {
+  border-bottom: 1px solid var(--lightgrey);
+  padding: 2rem 0 0 1rem;
+}
 
 /* Media Queries 
-	Mobile: 375px
-- 	Desktop: 1440px */
+	Mobile: 375px- 	 */
+@media screen and (max-width: 375px) {
+  main {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    background: var(--white);
+    border-radius: 30px;
+  }
+
+  .recipe-img {
+    border-radius: 0;
+  }
+
+  .recipe-title {
+    color: var(--darkcharcoal);
+    font-family: var(--font-Young-serif);
+    font-weight: lighter;
+    font-size: 2.2rem;
+  }
+}
