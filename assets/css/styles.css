@@ -29,21 +29,21 @@ html {
 }
 
 .title {
-	color: var(--nutmeg);
 	font-family: var(--font-Young-serif);
-	font-weight: lighter;
-	font-size: 1.8rem;
+	color: var(--nutmeg);
+	font-weight: 500;
+	font-size: 1.75rem;
 	margin-bottom: 1.5rem;
 }
 
 section {
-	margin-bottom: 2rem;
+	margin-bottom: 2.2rem;
 	background: var(--white);
 }
 
 ul ::marker {
 	color: var(--darkRaspberry);
-	font-size: 13px;
+	font-size: 12px;
 }
 
 .li-ul {
@@ -60,20 +60,24 @@ span {
 	color: var(--wengebrown);
 }
 
-/* 		Main		___________________________________ */
+/* region Main		___________________________________ */
 main {
-	margin: 8rem auto;
-	padding: 2.5rem;
+	margin: 7.7rem auto;
+	padding: 2.5rem 2.5rem 0 2.5rem;
 	width: 46rem;
 	background: var(--white);
-	border-radius: 1.8rem;
+	border-radius: 1.2rem;
 }
 
 /*		Recipe section			_______________________ */
+#recipe {
+	margin-bottom: 2rem;
+}
 .recipe-img {
 	display: block;
 	width: 100%;
-	border-radius: 1rem;
+	border-radius: 0.8rem;
+	margin-bottom: 2.9rem;
 }
 
 .recipe-title {
@@ -81,65 +85,66 @@ main {
 	font-family: var(--font-Young-serif);
 	font-weight: lighter;
 	margin-bottom: 1.25rem;
-	font-size: 2.6rem;
-	margin-block: 2.8rem;
-	line-height: 2.2rem;
+	font-size: 2.5rem;
+	margin-block: 2.08rem;
 }
 
 /*		Preparation section		_______________________ */
 #preparation {
 	background: var(--rosewhite);
-	padding: 1rem 0.6rem;
-	border-radius: 0.93rem;
+	padding: 1.38rem 0.6rem;
+	border-radius: 0.8rem;
 }
 
-#preparation h3 {
+#preparation h2 {
 	color: var(--darkRaspberry);
-	margin-bottom: 1rem;
-	padding-left: 1rem;
-	font-size: 1.2rem;
+	margin-bottom: 0.9rem;
+	padding-left: 1.2rem;
+	font-size: 1.3rem;
 	font-weight: 700;
 }
 
-#preparation .unordered {
-	padding-left: 2.4rem;
-}
-
-#preparation .unordered span {
-	margin-right: 0.2rem;
+#preparation ul {
+	padding-left: 2.3rem;
 }
 
 /*		Ingredients section		_______________________ */
 #ingredients {
 	border-bottom: 1px solid var(--lightgrey);
-	padding-bottom: 2rem;
+	padding-bottom: 1.6rem;
 }
 
 ul {
-	padding-left: 1.2rem;
-}
-
-.li-ul {
 	padding-left: 1.3rem;
 }
 
-/*		Instructions section	________________________*/
+/*		Instructions section	*/
 #instructions {
 	border-bottom: 1px solid var(--lightgrey);
-	padding-bottom: 2rem;
+	padding-bottom: 1.2rem;
+}
+
+#instructions h2 {
+	margin-bottom: 1rem;
 }
 
 ol {
-	padding-left: 1.5rem;
+	list-style: none; /* Eliminar el estilo predeterminado de los números */
+	counter-reset: my-counter; /* Reiniciar el contador personalizado */
+	padding: 0.4rem;
 }
 
-ol ::marker {
+ol li::before {
+	content: counter(my-counter) '.'; /* Utilizar el valor del contador personalizado */
+	counter-increment: my-counter; /* Incrementar el contador personalizado */
+	font-family: var(--font-Outfit);
+	font-weight: bold;
 	color: var(--nutmeg);
+	margin-right: 0.9rem;
 }
 
 .li-ol {
-	padding-left: 1rem;
-	margin-bottom: 0.6rem;
+	margin-bottom: 0.5rem;
 }
 
 .li-ol span {
@@ -147,13 +152,21 @@ ol ::marker {
 }
 
 /*		Nutrition section		_______________________ */
+#nutrition {
+	padding-bottom: 1.6rem;
+}
 table {
+	margin-top: 0.66rem;
 	width: 100%;
 	border-bottom: none;
 }
 
+tr {
+	border-bottom: 1px solid red;
+}
+
 td {
-	padding: 1rem 0 0.8rem 2rem;
+	padding: 1rem 0 0.4rem 2rem;
 }
 
 td:not(.last) {
@@ -163,6 +176,14 @@ td:not(.last) {
 .measures {
 	color: var(--nutmeg);
 	padding-right: 1rem;
+}
+/* Footer */
+.attribution {
+	font-size: 11px;
+	text-align: center;
+}
+.attribution a {
+	color: hsl(228, 45%, 44%);
 }
 
 /* Media Queries 
