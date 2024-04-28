@@ -52,15 +52,17 @@ ul ::marker {
 }
 
 span,
+strong,
 ul ::marker {
 	font-weight: bold;
 }
 
-span {
+span,
+strong {
 	color: var(--wengebrown);
 }
 
-/* region Main		___________________________________ */
+/*  Main		___________________________________ */
 main {
 	margin: 7.7rem auto;
 	padding: 2.5rem 2.5rem 0 2.5rem;
@@ -129,26 +131,22 @@ ul {
 }
 
 ol {
-	list-style: none; /* Eliminar el estilo predeterminado de los números */
-	counter-reset: my-counter; /* Reiniciar el contador personalizado */
-	padding: 0.4rem;
-}
-
-ol li::before {
-	content: counter(my-counter) '.'; /* Utilizar el valor del contador personalizado */
-	counter-increment: my-counter; /* Incrementar el contador personalizado */
-	font-family: var(--font-Outfit);
-	font-weight: bold;
-	color: var(--nutmeg);
-	margin-right: 0.9rem;
+	list-style: none;
+	padding: 0.5rem;
 }
 
 .li-ol {
+	display: flex;
 	margin-bottom: 0.5rem;
 }
 
-.li-ol span {
-	margin-right: 0.3rem;
+.li-ol h4 {
+	color: var(--nutmeg);
+	margin-right: 1.3rem;
+}
+
+.li-ol strong {
+	margin-right: 0.4rem;
 }
 
 /*		Nutrition section		_______________________ */
