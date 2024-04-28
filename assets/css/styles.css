@@ -140,7 +140,8 @@ ol {
 	margin-bottom: 0.5rem;
 }
 
-.li-ol h4 {
+.li-ol h3 {
+	font-size: 1rem;
 	color: var(--nutmeg);
 	margin-right: 1.3rem;
 }
